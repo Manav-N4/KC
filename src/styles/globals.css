@@ -1,0 +1,451 @@
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  --font-size: 16px;
+  --background: #ffffff;
+  --foreground: oklch(0.145 0 0);
+  --card: #ffffff;
+  --card-foreground: oklch(0.145 0 0);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.145 0 0);
+  --primary: #030213;
+  --primary-foreground: oklch(1 0 0);
+  --secondary: oklch(0.95 0.0058 264.53);
+  --secondary-foreground: #030213;
+  --muted: #ececf0;
+  --muted-foreground: #717182;
+  --accent: #e9ebef;
+  --accent-foreground: #030213;
+  --destructive: #d4183d;
+  --destructive-foreground: #ffffff;
+  --border: rgba(0, 0, 0, 0.1);
+  --input: transparent;
+  --input-background: #f3f3f5;
+  --switch-background: #cbced4;
+  --font-weight-medium: 500;
+  --font-weight-normal: 400;
+  --ring: oklch(0.708 0 0);
+  --chart-1: oklch(0.646 0.222 41.116);
+  --chart-2: oklch(0.6 0.118 184.704);
+  --chart-3: oklch(0.398 0.07 227.392);
+  --chart-4: oklch(0.828 0.189 84.429);
+  --chart-5: oklch(0.769 0.188 70.08);
+  --radius: 0.625rem;
+  --sidebar: oklch(0.985 0 0);
+  --sidebar-foreground: oklch(0.145 0 0);
+  --sidebar-primary: #030213;
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.97 0 0);
+  --sidebar-accent-foreground: oklch(0.205 0 0);
+  --sidebar-border: oklch(0.922 0 0);
+  --sidebar-ring: oklch(0.708 0 0);
+  
+  /* Typography sizes */
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-lg: 1.125rem;
+  --text-xl: 1.25rem;
+  --text-2xl: 1.5rem;
+  --text-3xl: 1.875rem;
+  
+  /* AthleteConnect Indian Tricolor Theme */
+  --athlete-saffron: #ff9933;
+  --athlete-saffron-light: #fff2e6;
+  --athlete-saffron-dark: #e6822e;
+  --athlete-green: #138808;
+  --athlete-green-light: #e8f5e8;
+  --athlete-green-dark: #0f6e07;
+  --athlete-white: #ffffff;
+  --athlete-navy: #000080;
+  --athlete-navy-light: #e6e6ff;
+  --athlete-blue: #2563eb;
+  --athlete-blue-light: #dbeafe;
+  --athlete-gray: #6b7280;
+  --athlete-gray-light: #f9fafb;
+}
+
+.dark {
+  --background: oklch(0.145 0 0);
+  --foreground: oklch(0.985 0 0);
+  --card: oklch(0.145 0 0);
+  --card-foreground: oklch(0.985 0 0);
+  --popover: oklch(0.145 0 0);
+  --popover-foreground: oklch(0.985 0 0);
+  --primary: oklch(0.985 0 0);
+  --primary-foreground: oklch(0.205 0 0);
+  --secondary: oklch(0.269 0 0);
+  --secondary-foreground: oklch(0.985 0 0);
+  --muted: oklch(0.269 0 0);
+  --muted-foreground: oklch(0.708 0 0);
+  --accent: oklch(0.269 0 0);
+  --accent-foreground: oklch(0.985 0 0);
+  --destructive: oklch(0.396 0.141 25.723);
+  --destructive-foreground: oklch(0.637 0.237 25.331);
+  --border: oklch(0.269 0 0);
+  --input: oklch(0.269 0 0);
+  --ring: oklch(0.439 0 0);
+  --font-weight-medium: 500;
+  --font-weight-normal: 400;
+  --chart-1: oklch(0.488 0.243 264.376);
+  --chart-2: oklch(0.696 0.17 162.48);
+  --chart-3: oklch(0.769 0.188 70.08);
+  --chart-4: oklch(0.627 0.265 303.9);
+  --chart-5: oklch(0.645 0.246 16.439);
+  --sidebar: oklch(0.205 0 0);
+  --sidebar-foreground: oklch(0.985 0 0);
+  --sidebar-primary: oklch(0.488 0.243 264.376);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.269 0 0);
+  --sidebar-accent-foreground: oklch(0.985 0 0);
+  --sidebar-border: oklch(0.269 0 0);
+  --sidebar-ring: oklch(0.439 0 0);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-input-background: var(--input-background);
+  --color-switch-background: var(--switch-background);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-athlete-saffron: var(--athlete-saffron);
+  --color-athlete-saffron-light: var(--athlete-saffron-light);
+  --color-athlete-saffron-dark: var(--athlete-saffron-dark);
+  --color-athlete-green: var(--athlete-green);
+  --color-athlete-green-light: var(--athlete-green-light);
+  --color-athlete-green-dark: var(--athlete-green-dark);
+  --color-athlete-white: var(--athlete-white);
+  --color-athlete-navy: var(--athlete-navy);
+  --color-athlete-navy-light: var(--athlete-navy-light);
+  --color-athlete-blue: var(--athlete-blue);
+  --color-athlete-blue-light: var(--athlete-blue-light);
+  --color-athlete-gray: var(--athlete-gray);
+  --color-athlete-gray-light: var(--athlete-gray-light);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/**
+ * Base typography. This is not applied to elements which have an ancestor with a Tailwind text class.
+ */
+@layer base {
+  :where(:not(:has([class*=" text-"]), :not(:has([class^="text-"])))) {
+    h1 {
+      font-size: var(--text-2xl);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    h2 {
+      font-size: var(--text-xl);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    h3 {
+      font-size: var(--text-lg);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    h4 {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    p {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-normal);
+      line-height: 1.5;
+    }
+
+    label {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    button {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    input {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-normal);
+      line-height: 1.5;
+    }
+  }
+}
+
+html {
+  font-size: var(--font-size);
+}
+
+/* AthleteConnect Indian Tricolor Utilities */
+@layer utilities {
+  .bg-athlete-saffron { background-color: var(--athlete-saffron); }
+  .bg-athlete-saffron-light { background-color: var(--athlete-saffron-light); }
+  .bg-athlete-saffron-dark { background-color: var(--athlete-saffron-dark); }
+  .bg-athlete-green { background-color: var(--athlete-green); }
+  .bg-athlete-green-light { background-color: var(--athlete-green-light); }
+  .bg-athlete-green-dark { background-color: var(--athlete-green-dark); }
+  .bg-athlete-white { background-color: var(--athlete-white); }
+  .bg-athlete-navy { background-color: var(--athlete-navy); }
+  .bg-athlete-navy-light { background-color: var(--athlete-navy-light); }
+  .bg-athlete-blue { background-color: var(--athlete-blue); }
+  .bg-athlete-blue-light { background-color: var(--athlete-blue-light); }
+  .bg-athlete-gray-light { background-color: var(--athlete-gray-light); }
+  
+  .text-athlete-saffron { color: var(--athlete-saffron); }
+  .text-athlete-saffron-dark { color: var(--athlete-saffron-dark); }
+  .text-athlete-green { color: var(--athlete-green); }
+  .text-athlete-green-dark { color: var(--athlete-green-dark); }
+  .text-athlete-navy { color: var(--athlete-navy); }
+  .text-athlete-blue { color: var(--athlete-blue); }
+  .text-athlete-gray { color: var(--athlete-gray); }
+  
+  .border-athlete-saffron { border-color: var(--athlete-saffron); }
+  .border-athlete-green { border-color: var(--athlete-green); }
+  .border-athlete-navy { border-color: var(--athlete-navy); }
+  .border-athlete-blue { border-color: var(--athlete-blue); }
+  .border-athlete-gray { border-color: var(--athlete-gray); }
+  
+  .border-l-athlete-saffron { border-left-color: var(--athlete-saffron); }
+  .border-l-athlete-green { border-left-color: var(--athlete-green); }
+  .border-l-athlete-navy { border-left-color: var(--athlete-navy); }
+  .border-l-athlete-blue { border-left-color: var(--athlete-blue); }
+  .border-l-athlete-gray { border-left-color: var(--athlete-gray); }
+  .border-l-red-500 { border-left-color: #ef4444; }
+  
+  /* Premium Hover States for AthleteConnect Theme */
+  .hover-athlete-primary:hover { 
+    background-color: var(--athlete-green-light); 
+    color: var(--athlete-green-dark);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 16px rgba(19, 136, 8, 0.15);
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .hover-athlete-saffron:hover { 
+    background-color: var(--athlete-saffron-light);
+    color: var(--athlete-saffron-dark);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 16px rgba(255, 153, 51, 0.2);
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .hover-athlete-green:hover { 
+    background-color: var(--athlete-green-light);
+    color: var(--athlete-green-dark);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 16px rgba(19, 136, 8, 0.2);
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .hover-athlete-navy:hover { 
+    background-color: var(--athlete-navy-light);
+    color: var(--athlete-navy);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 16px rgba(0, 0, 128, 0.2);
+    transition: all 0.3s ease-in-out;
+  }
+  
+  /* Button Hover States */
+  .btn-hover-athlete:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 6px 20px rgba(19, 136, 8, 0.15);
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .btn-hover-saffron:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 6px 20px rgba(255, 153, 51, 0.25);
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .btn-hover-navy:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 6px 20px rgba(0, 0, 128, 0.25);
+    transition: all 0.3s ease-in-out;
+  }
+  
+  /* Responsive text sizing utilities */
+  .text-responsive-xs { font-size: clamp(0.65rem, 2vw, 0.75rem); }
+  .text-responsive-sm { font-size: clamp(0.75rem, 2.5vw, 0.875rem); }
+  .text-responsive-base { font-size: clamp(0.875rem, 3vw, 1rem); }
+  .text-responsive-lg { font-size: clamp(1rem, 3.5vw, 1.125rem); }
+  
+  /* Button responsive sizing */
+  .btn-responsive { 
+    padding: clamp(0.5rem, 2vw, 0.75rem) clamp(1rem, 4vw, 1.5rem);
+    font-size: clamp(0.75rem, 2.5vw, 0.875rem);
+    min-height: 2.5rem;
+  }
+  
+  .btn-responsive-sm { 
+    padding: clamp(0.375rem, 1.5vw, 0.5rem) clamp(0.75rem, 3vw, 1rem);
+    font-size: clamp(0.6875rem, 2vw, 0.75rem);
+    min-height: 2rem;
+  }
+  
+  /* Card responsive spacing */
+  .card-responsive { 
+    padding: clamp(1rem, 4vw, 1.5rem); 
+  }
+  
+  /* Grid responsive utilities */
+  .grid-responsive-2 { 
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: clamp(0.5rem, 2vw, 1rem);
+  }
+  
+  .grid-responsive-3 { 
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: clamp(0.5rem, 2vw, 1rem);
+  }
+  
+  .grid-responsive-4 { 
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: clamp(0.375rem, 1.5vw, 0.75rem);
+  }
+  
+  /* Enhanced Tab Styling for AthleteConnect */
+  .tabs-athlete-active {
+    background: linear-gradient(135deg, var(--athlete-green), var(--athlete-green-dark));
+    color: white;
+    border-color: var(--athlete-green);
+    box-shadow: 0 4px 12px rgba(19, 136, 8, 0.3);
+    transform: scale(1.02);
+  }
+  
+  .tabs-recruiter-active {
+    background: linear-gradient(135deg, var(--athlete-saffron), var(--athlete-saffron-dark));
+    color: white;
+    border-color: var(--athlete-saffron);
+    box-shadow: 0 4px 12px rgba(255, 153, 51, 0.3);
+    transform: scale(1.02);
+  }
+  
+  .tabs-school-active {
+    background: linear-gradient(135deg, var(--athlete-navy), #000080);
+    color: white;
+    border-color: var(--athlete-navy);
+    box-shadow: 0 4px 12px rgba(0, 0, 128, 0.3);
+    transform: scale(1.02);
+  }
+  
+  .tabs-athlete-hover:hover {
+    background-color: var(--athlete-green-light);
+    color: var(--athlete-green-dark);
+    transform: translateY(-1px);
+    box-shadow: 0 2px 8px rgba(19, 136, 8, 0.15);
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .tabs-recruiter-hover:hover {
+    background-color: var(--athlete-saffron-light);
+    color: var(--athlete-saffron-dark);
+    transform: translateY(-1px);
+    box-shadow: 0 2px 8px rgba(255, 153, 51, 0.15);
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .tabs-school-hover:hover {
+    background-color: var(--athlete-navy-light);
+    color: var(--athlete-navy);
+    transform: translateY(-1px);
+    box-shadow: 0 2px 8px rgba(0, 0, 128, 0.15);
+    transition: all 0.3s ease-in-out;
+  }
+  
+  /* Scrollbar hiding for mobile tabs */
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+  
+  /* Mobile tab handling with improved scrolling */
+  @media (max-width: 640px) {
+    .tabs-responsive {
+      display: flex;
+      overflow-x: auto;
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+      -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+    }
+    
+    .tabs-responsive::-webkit-scrollbar {
+      display: none;
+    }
+    
+    .tabs-responsive .tab-item {
+      flex: 0 0 auto;
+      min-width: fit-content;
+      white-space: nowrap;
+    }
+  }
+  
+  /* No text truncation utility */
+  .no-truncate {
+    overflow: visible;
+    text-overflow: unset;
+    white-space: normal;
+  }
+  
+  /* Flexible text sizing */
+  .text-flex {
+    font-size: clamp(0.75rem, 2.5vw, 0.875rem);
+    line-height: 1.2;
+  }
+}
